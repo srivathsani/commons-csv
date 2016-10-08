@@ -187,12 +187,14 @@ CSV files of various types.
         </configuration>
       </plugin>
       <plugin>
-				<artifactId>maven-failsafe-plugin</artifactId>
-				<version>2.11</version>
+				<groupId>org.apache.maven.plugins</groupId>
+	                        <artifactId>maven-failsafe-plugin</artifactId>
+				<version>2.19</version>
 				<configuration>
-					<includes>
-						<include>**/*Test.java</include>						
-					</includes>
+					        <include>**/*Test.java</include>
+						<include>**/Test*.java</include>
+						<include>**/When*.java</include>
+						<include>**/*TestSuite.java</include>
 				</configuration>
 				<executions>
 					<execution>
