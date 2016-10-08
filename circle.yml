@@ -1,3 +1,8 @@
+
+general:
+   artifacts:
+     - $CIRCLE_TEST_REPORTS
+     - target
 test:
  override:
   parallel: true
